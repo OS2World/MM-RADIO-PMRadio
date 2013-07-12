@@ -1,0 +1,35 @@
+---------------------------------------------------------------------------
+2004/04/11
+
+The Author of PMRadio, Stepehm Loomis, has turned this software Open Source.
+The source can be found in a zip file enclosed
+
+Thanks
+Martin Iturbide
+http://www.os2world.com
+
+---------------------------------------------------------------------------
+[V1.1] Oct 28th 1996
+
+At the moment this version only supports the RadioReveal card using
+i/o port  20F/20C "jumper ON"
+
+Special Thanks to Marco Cassili of Italy for letting me know pmradio works.
+But, In my ignorance I had assumed that all stations in the world
+where on odd multiples.
+
+This now supports  88.1 thru 108.0  in increments of .1
+
+If your country requires a different range, please let me know.
+I'll be adding a FINE TUNE setting next weekend, when I have time to work on it.
+
+
+Peace, Sophisto
+
+Stephen Loomis
+2319 Lori Dr SW
+Cedar Rapids, IA  U.S.A
+        52404
+
+This is version 1.1; special note to IBM, if you include this on a CDROM, SEND
+me the CDROM for payment.

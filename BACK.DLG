@@ -1,0 +1,27 @@
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+
+DLGTEMPLATE 100 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "PM-Radio", 100, 9, 9, 135, 95, WS_VISIBLE, FCF_SYSMENU | 
+            FCF_TITLEBAR | FCF_MINBUTTON
+    BEGIN
+        PUSHBUTTON      "On", 101, 35, 11, 20, 10
+        PUSHBUTTON      "Off", 102, 5, 11, 20, 10
+        PUSHBUTTON      "Up", 105, 5, 23, 20, 10
+        PUSHBUTTON      "Down", 106, 32, 23, 27, 10
+        PUSHBUTTON      "Up", 107, 5, 35, 20, 10
+        PUSHBUTTON      "Down", 108, 32, 35, 27, 10
+        PUSHBUTTON      "On", 109, 5, 47, 20, 10
+        PUSHBUTTON      "Off", 110, 35, 47, 20, 10
+        CTEXT           "Power", 111, 60, 11, 35, 8, DT_VCENTER
+        CTEXT           "Volume", 112, 60, 23, 35, 8, DT_VCENTER
+        CTEXT           "Seek", 113, 60, 35, 35, 8, DT_VCENTER
+        CTEXT           "Mute", 114, 60, 47, 35, 8, DT_VCENTER
+        CTEXT           "", 104, 95, 11, 36, 11
+        CONTROL         115, 115, 6, 62, 20, 16, WC_STATIC, SS_BITMAP | 
+                        WS_GROUP | WS_VISIBLE
+        CONTROL         "Freq", 116, 93, 20, 40, 33, WC_CIRCULARSLIDER, CSS_POINTSELECT | WS_VISIBLE
+    END
+END

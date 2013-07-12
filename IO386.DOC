@@ -1,0 +1,42 @@
+
+Finally a solution to the hardware port access problem. This package contains
+3 files: io386.asm, io386.def, and io386.obj. These files allow your CSet/2
+program to access the 8 and 16 bit hardware ports.
+
+To use these functions you need to link with io386.obj. You can recompile
+io386.asm if you need to make changes. It has been tested with TASM 3.1 and
+some version of MASM (I didn't test it myself). You MUST also include the
+segment definition and export section of the io386.def file in your programs
+.def file.
+
+You must then declare the functions as follows:
+
+	extern _Far16 _Pascal OUTP8(USHORT, UCHAR);
+	extern _Far16 _Pascal OUTP16(USHORT, USHORT);
+	extern UCHAR _Far16 _Pascal INP8(USHORT);
+	extern USHORT _Far16 _Pascal INP16(USHORT);
+
+You can then call the functions as you would call any function:
+	
+	OUTP8(portnumber, (UCHAR)value);
+	OUTP16(portnumber, (USHORT)value);
+	(UCHAR)value=INP8(portnumber);
+	(USHORT)value=INP16(portnumber);
+
+I have tested this quite a bit and it works just fine for me. If there are any
+problems then just let me know.
+
+This was put together by me with EXTENSIVE help from Joel Armengaud (what CAN'T
+this guy do...) in the hopes that it will help some people out. Feel free to
+use this code as you will. Also feel free to give Joel and I credit for 
+finally getting this darn problem figured out.
+
+Enjoy.
+
+Keith Murray (murrayk@prism.cs.orst.edu)
+Joel Armengaud (joe2@vnet.ibm.com)
+
+                              ____          _____  ____
+Keith Murray                 /     /___/ /\ \    \ \____    P.O. Box 1889
+murrayk@prism.cs.orst.edu   /___  /   / /__\ \____\ ____\   Corvallis OR 97339
+   the Dodger                  s  o  f  t  w\ a  r  e

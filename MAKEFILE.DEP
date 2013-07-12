@@ -1,0 +1,4 @@
+
+.\sophisto.obj: \
+	.\sophisto.c \
+	MAKEFILE

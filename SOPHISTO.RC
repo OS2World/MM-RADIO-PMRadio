@@ -1,0 +1,5 @@
+DEFAULTICON sophisto.ico
+POINTER 555 sophisto.ico
+BITMAP 115 rrbit.bmp
+#include <os2.h>
+RCINCLUDE sophisto.dlg

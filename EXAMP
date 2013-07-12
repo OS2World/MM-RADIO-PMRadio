@@ -1,0 +1,12 @@
+HINI dini
+<Solarian> dini = PrfOpenProfile(ini2, "dialer.ini");
+<HrBeing>		  CTEXT 		  "Frequency : xxxxHz", 103, 4, 18, 123, 8,
+				  DT_VCENTER
+				  <HrBeing> 						PRESPARAMS PP_FONTNAMESIZE, "12.Times New
+				   Roman Bold"
+				   <Solarian> That opens/creates the .ini file...
+				   <Solarian> PrfWriteProfileData(dini, szAppName, (PSZ)"Redial", &redial, 1);
+				   <HrBeing> Notice the "12.Times New Roman Bold"
+				   <HrBeing> Change and enjoy :)
+				   <Solarian> That saves an app...
+

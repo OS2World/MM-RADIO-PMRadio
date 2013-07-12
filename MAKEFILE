@@ -1,0 +1,39 @@
+# MAKEFILE
+# Created by IBM WorkFrame/2 MakeMake at 3:31:24 on 2 May 1995
+#
+# The actions included in this makefile are:
+#  Compile::C Set ++ Compiler
+#  Link::C Set ++ Linker
+
+.SUFFIXES: .C
+
+.all: \
+	.\sophisto.exe
+
+.C.obj:
+	@echo Compile::C Set ++ Compiler
+    icc.exe /Tdc /Ss /Gh /Ti- /Tx- /W1  /Gd+ /G5 /Gs+ /Gi+ /O+ /C /Rn %s
+
+.ASM.obj:
+    @echo wasm me!
+    wasm %s
+
+.\sophisto.exe: \
+	.\sophisto.obj \
+	.\sophisto.RES \
+    .\io386.obj \
+	{$(LIB)}mmpm2.lib \
+	MAKEFILE
+	@echo Link::C Set ++ Linker
+	@echo Bind::Resource Bind
+	icc.exe @<<
+	 /B" /pmtype:pm"
+	 /Fesophisto.exe
+	 dde4mbs.lib
+     io386.def
+	 .\sophisto.obj
+     .\io386.obj
+<<
+	rc.exe sophisto.RES sophisto.exe
+
+!include MAKEFILE.DEP
